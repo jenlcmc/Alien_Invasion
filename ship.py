@@ -6,11 +6,11 @@ class Ship:
     def __init__(self, ai_game):
         """Initialize the ship and its starting pos"""
         self.screen = ai_game.screen
-        self.settings = ai_game.screen
+        self.settings = ai_game.settings
         self.screen_rect = ai_game.screen.get_rect()
 
         #Load ship image and get its react
-        self.image = pygame.image.load('images/ship.bmp')
+        self.image = pygame.image.load('images/shipA.bmp')
         self.rect = self.image.get_rect()
 
         #start each ship at bot center of screen
@@ -26,10 +26,10 @@ class Ship:
     def update(self):
         """Update the ship's pos based on movement flag"""
         #update ship x value not rect
-        if self.moving_right:
-            self.rect.x += self.settings.ship_speed
-        if self.moving_left:
-            self.rect.x -= self.settings.ship_speed
+        if self.moving_right and self.rect.right < self.screen_rect.right:
+            self.x += self.settings.ship_speed
+        if self.moving_left and self.rect.left > 0:
+            self.x -= self.settings.ship_speed
 
         #update rect obj from self.x
         self.rect.x = self.x
