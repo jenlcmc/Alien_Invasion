@@ -10,7 +10,7 @@ class Ship:
         self.screen_rect = ai_game.screen.get_rect()
 
         #Load ship image and get its react
-        self.image = pygame.image.load('images/shipA.bmp')
+        self.image = pygame.image.load('images/rocket.png')
         self.rect = self.image.get_rect()
 
         #start each ship at bot center of screen
