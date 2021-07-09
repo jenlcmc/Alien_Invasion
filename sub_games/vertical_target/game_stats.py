@@ -9,3 +9,5 @@ class GameStats:
         self.ships_left = self.settings.ship_limit
 
         self.num_misses = 0
+
+        self.num_hits = 0
