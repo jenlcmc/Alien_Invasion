@@ -12,6 +12,7 @@ from time import sleep
 from game_stats import GameStats
 from button import Button
 from scoreboard import Scoreboard
+import sound as se 
 class AlienInvasion:
     """overall class for game and behavior"""
 
@@ -198,6 +199,7 @@ class AlienInvasion:
         if len(self.bullets) < self.settings.bullets_allowed:
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
+            se.bullet_sound.play()
 
     def _update_bullets(self):
         """Update pos of bullets and get rid of old"""
@@ -219,6 +221,7 @@ class AlienInvasion:
                 self.stats.score += self.settings.alien_points * len(aliens)
             self.sb.prep_score()
             self.sb.check_high_score()
+            se.alien_sound.play()
 
         if not self.aliens:
             #destory existing bullets and create new fleet
@@ -278,6 +281,7 @@ class AlienInvasion:
     def _ship_hit(self):
         """Respond to ship being hit by alien"""
         if self.stats.ships_left > 0:
+            se.ship_sound.play()
             #decrement ship_left
             self.stats.ships_left -= 1
             self.sb.prep_ships()
@@ -328,10 +332,10 @@ class AlienInvasion:
         if self.stats.high_score > saved_high_score:
             with open('high_score.json', 'w') as f:
                 json.dump(self.stats.high_score, f)
-
+        
         sys.exit()
 
 if __name__ == '__main__':
     #make a game instance and run the game
-    ai = AlienInvasion()
-    ai.run_game()
+    player = AlienInvasion()
+    player.run_game()
