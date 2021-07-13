@@ -1,6 +1,8 @@
 import sys
 import pygame
 import json
+import time
+import random
 
 from setting import Settings
 from ship import Ship
@@ -12,6 +14,7 @@ from button import Button
 from scoreboard import Scoreboard
 class AlienInvasion:
     """overall class for game and behavior"""
+
     def __init__(self):
         """initialize game and create game"""
         pygame.init()
@@ -63,9 +66,13 @@ class AlienInvasion:
         self.hard_button._update_msg_position()
 
     def run_game(self):
-        self._create_fleet()
+        #Set fps for the game 
+        FPS = 80
+        clock = pygame.time.Clock()
+
         """Start the main loop for the game"""
         while True:
+            clock.tick(FPS)
             self.screen.fill((0,0,0))
             #chekc for inputs activities
             self._check_events()
@@ -121,6 +128,7 @@ class AlienInvasion:
             self.settings.initialize_dynamic_settings()
             self.stats.reset_stats()
             self.stats.game_active = True
+
             self.sb.prep_score()
             self.sb.prep_level()
             self.sb.prep_ships()
