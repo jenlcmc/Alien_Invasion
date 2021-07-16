@@ -7,6 +7,7 @@ import random
 from setting import Settings
 from ship import Ship
 from bullet import Bullet
+from alien_bullet import Alien_bullet
 from alien import Alien
 from time import sleep
 from game_stats import GameStats
@@ -22,7 +23,11 @@ class AlienInvasion:
         self.settings = Settings()
 
         #screen full
-        self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
+        #this for not full screen
+        #self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height)) 
+        self.screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
+        self.settings.screen_width = self.screen.get_rect().width
+        self.settings.screen_height = self.screen.get_rect().height
         pygame.display.set_caption("ALIEN INVASION")
         
         #create instance to store game stats

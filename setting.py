@@ -8,7 +8,7 @@ class Settings:
         self.screen_width = 1200
         self.screen_height = 900
         self.bg_color = (0, 0, 0)
-        self.bg = pygame.image.load("images/space.png")
+        self.bg = pygame.image.load("images/space.jpg")
         self.rect = self.bg.get_rect()
 
         #ship setting
@@ -18,6 +18,7 @@ class Settings:
         self.bullet_width = 4
         self.bullet_height = 16
         self.bullet_color = (255,0,0)
+        self.alien_color = (124, 252, 0)
         self.bullets_allowed = 5
 
         # Alien settings
