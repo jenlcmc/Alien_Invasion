@@ -65,3 +65,8 @@ $ pip3 install pygame
 The player will have to choose the level same way with the above instruction
 
 **Enjoy!**
+
+# Upcoming features
+- Add health bar for ship
+- Make aliens shoot the ship
+- Add shield for ship 
