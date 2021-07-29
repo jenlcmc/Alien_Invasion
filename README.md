@@ -19,18 +19,18 @@ In addition, there will be 3 levels for player to chooses, from easy to hard. To
 
 ## To install, please follow the office guide to install python 
 **To install pyagme**
-```pip3 install pygame```
+```$ pip3 install pygame```
 
 **To install sound packages + pygame (MacOS)/ Supposed that python install via brew**
 ```
-pip3 install pygame
-brew install hg sdl sdl_image sdl_ttf
-brew install sdl_mixer portmidi
+$ pip3 install pygame
+$ brew install hg sdl sdl_image sdl_ttf
+$ brew install sdl_mixer portmidi
  ```
  
  **To install sound packages + pygame (Windows)**
 ```
-pip3 install pygame
+$ pip3 install pygame
  ```
  **There is a problem with sound packages for windows, so if it not work, please comment out following lines in alien_invasion.py file**
  - 16
@@ -47,6 +47,9 @@ pip3 install pygame
 
 # Play
 ```Please clone the respitory and cd to the folder ```
+**There is few sub games that the player can try**
+```cd into that folder```
+```$ python3 game.py```
 
 # Running
 
