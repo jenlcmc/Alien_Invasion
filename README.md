@@ -47,8 +47,11 @@ $ pip3 install pygame
 
 # Play
 ```Please clone the respitory and cd to the folder ```
+
 **There is few sub games that the player can try**
+
 ```cd into that folder```
+
 ```$ python3 game.py```
 
 # Running
@@ -56,7 +59,9 @@ $ pip3 install pygame
 ```$ python3 alien_invasion.py```
 
 **There is another file that automate the ship if the player want to try**
+
 ```$ python3 ai.py```
+
 The player will have to choose the level same way with the above instruction
 
 **Enjoy!**
