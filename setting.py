@@ -39,9 +39,9 @@ class Settings:
         if self.difficulty_level == 'easy':
             self.ship_limit = 6 
             self.bullets_allowed = 10
-            self.ship_speed =  0.5
+            self.ship_speed =  1.0
             self.bullet_speed = 1.5
-            self.alien_speed = 0.5 
+            self.alien_speed = 1.0
 
         if self.difficulty_level == 'medium':
             self.ship_limit = 3 

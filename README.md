@@ -38,12 +38,17 @@ $ pip3 install pygame
  - 229
  - 289
 
+
+# To play
+```$$ python3 alien_invasion.py```
 # Controls
 
 * Space-bar
   * Shoot
 * Arrows keys (left - right)
   * Move the ship left / right
+* q
+  * to quit the game/exit fullscreen
 
 # Play
 ```Please clone the respitory and cd to the folder ```
