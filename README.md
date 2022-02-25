@@ -62,6 +62,7 @@ $ pip3 install pygame
 # Running
 
 ```$ cd src ```
+
 ```$ python3 alien_invasion.py```
 
 **There is another file that automate the ship if the player want to try**
